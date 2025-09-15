@@ -9,7 +9,8 @@ export function useLocalStorageState(initialState, key) {
         function () {
             localStorage.setItem(key, JSON.stringify(value));
         },
-        [value]
+        [value,key]
     );
     return [value, setValue];
 }
+
